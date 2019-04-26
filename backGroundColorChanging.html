@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Background Color Changing</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .box {
+        font-family: sans-serif;
+        font-size: 4em;
+        padding: 5em 0;
+        text-align: center;
+        color: white;
+        height: 25.5vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <p>Hello World</p>
+    </div>
+
+    <script>
+      let nIntervId = setInterval(function() {
+        let a = [];
+        let b = [];
+        var box = document.querySelector(".box");
+        a[0] = Math.random() * 100 + 150;
+        a[1] = Math.random() * 100 + 50;
+        a[2] = Math.random() * 100 + 150;
+        b[0] = Math.random() * 100 + 150;
+        b[1] = Math.random() * 100 + 100;
+        b[2] = Math.random() * 100 + 150;
+        let x = "rgb(" + a[0] + "," + a[1] + "," + a[2] + ")";
+        let y = "rgb(" + b[0] + "," + b[1] + "," + b[2] + ")";
+        let g = "linear-gradient(" + x + "," + y + " )";
+        box.style.background = g;
+      }, 1000);
+    </script>
+  </body>
+</html>
